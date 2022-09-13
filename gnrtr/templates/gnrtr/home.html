@@ -1,0 +1,28 @@
+<h1>Генерация пароля </h1>
+
+#{{ pass }}
+<form action="{% url 'pass' %}">
+    <select name="length">
+        <option value="6"> 6 </optionvalue>
+        <option value="7"> 7 </optionvalue>
+        <option value="8"> 8 </optionvalue>
+        <option value="9"> 9 </optionvalue>
+        <option value="10" selected="selected"> 10 </optionvalue>
+        <option value="11"> 11 </optionvalue>
+        <option value="12"> 12 </optionvalue>
+
+    </select>
+    <br>
+    <input type="checkbox" name="uppercase"> Верхний регист
+    <br>
+    <input type="checkbox" name="numbers"> Числа
+    <br>
+    <input type="checkbox" name="special"> Спец.символы
+    <br>
+    <input type="submit" value="Сгенерировать пароль">
+
+</form>
+
+ <br>
+ <br>
+    <a href="{% url 'about' %}">O nas</a>
